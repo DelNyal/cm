@@ -57,20 +57,45 @@ nav ul li a {
   text-decoration: none;
 
 }
+.slider-container {
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.slider {
+
+  
+
+}
+
+.slider img {
+
+  width: 100%;
+
+  height: auto;
+
+}
 
 #slider {
+  display: flex;
 
+  width: 100%;
   margin-top: 20px;
 
 }
 
 .slider-container {
 
+
+
+
+
+
+
   position: relative;
-
-  width: 100%;
-
-  height: 400px;
 
   overflow: hidden;
 
