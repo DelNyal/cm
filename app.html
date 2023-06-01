@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>GET Request Example</title>
+
+  <script>
+
+    function makeGetRequest() {
+
+      const url = 'https://tikvm.com/api/user/posts?unique_id=@imyou2003';
+
+      fetch(url)
+
+        .then(response => response.json())
+
+        .then(data => {
+
+          // Handle the response data
+
+          displayResponse(data);
+
+        })
+
+        .catch(error => {
+
+          // Handle any errors
+
+          console.error('Error:', error);
+
+        });
+
+    }
+
+    function displayResponse(data) {
+
+      const responseContainer = document.getElementById('response-container');
+
+      responseContainer.innerText = JSON.stringify(data);
+
+    }
+
+    window.onload = makeGetRequest;
+
+  </script>
+
+</head>
+
+<body>
+
+  <h1>GET Request Example</h1>
+
+  <div id="response-container"></div>
+
+</body>
+
+</html>
+
