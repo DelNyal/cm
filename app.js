@@ -1,4 +1,4 @@
-<script>
+
 const urlParams = new URLSearchParams(window.location.search);
 
 const somedata = urlParams.get('url');
@@ -22,4 +22,4 @@ fetch('https://tikvm.com/api/user/post/?unique_id='+somedata) // Replace with yo
     console.error('Error:', error);
 
   });
-</script>
+
