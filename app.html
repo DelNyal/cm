@@ -6,7 +6,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 
 const somedata = urlParams.get('url');
-alert(somedata);
+function getRequest(){
 fetch('https://tikvm.com/api/user/post/?unique_id='+somedata) // Replace with your API endpoint URL
 
   .then(response => response.json())
@@ -26,6 +26,8 @@ fetch('https://tikvm.com/api/user/post/?unique_id='+somedata) // Replace with yo
     console.error('Error:', error);
 
   });
+  }
+      window.onload=getRequest;
 </script>
     </body>
  </html>
