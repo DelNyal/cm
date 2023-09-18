@@ -1,28 +1,126 @@
-// JavaScript code for auto image slider
+const menubtn = document.querySelector('.menu')
+menu = document.querySelector('header ul')
+up = document.querySelector('.up')
 
-let slideIndex = 0;
-
-const slides = document.getElementsByClassName("slide");
-
-function showSlide() {
-
-  for (let i = 0; i < slides.length; i++) {
-
-    slides[i].style.opacity = "0";
-
+menubtn.onclick = function() {
+  if (!menu.classList.contains('open')) {
+    menu.classList.add('open')
+    menubtn.style.transform = 'rotate(180deg)'
+    menubtn.classList.remove('uil-bars')
+    menubtn.classList.add('uil-times')
+  } else {
+    menu.classList.remove('open')
+    menubtn.style.transform = 'rotate(0deg)'
+    menubtn.classList.add('uil-bars')
+    menubtn.classList.remove('uil-times')
   }
-
-  slideIndex++;
-
-  if (slideIndex > slides.length) {
-
-    slideIndex = 1;
-
-  }
-
-  slides[slideIndex - 1].style.opacity = "1";
-
 }
 
-setInterval(showSlide, 3000); // Change slide every 3 seconds
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    up.style.display = "block"
+  } else {
+    up.style.display = "none"
+  }
+  if (menu.classList.contains('open')) {
+    menu.classList.remove('open')
+    menubtn.style.transform = 'rotate(0deg)'
+    menubtn.classList.add('uil-bars')
+    menubtn.classList.remove('uil-times')
+  }
+})
 
+up.addEventListener('click', () => {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+})
+
+const nav1 = document.getElementById('nav1')
+nav2 = document.getElementById('nav2')
+nav3 = document.getElementById('nav3')
+nav4 = document.getElementById('nav4')
+
+
+
+nav1.onclick = function() {
+  menu.classList.remove('open')
+  menubtn.style.transform = 'rotate(0deg)'
+  menubtn.classList.add('uil-bars')
+  menubtn.classList.remove('uil-times')
+}
+nav2.onclick = function() {
+  menu.classList.remove('open')
+  menubtn.style.transform = 'rotate(0deg)'
+  menubtn.classList.add('uil-bars')
+  menubtn.classList.remove('uil-times')
+}
+nav3.onclick = function() {
+  menu.classList.remove('open')
+  menubtn.style.transform = 'rotate(0deg)'
+  menubtn.classList.add('uil-bars')
+  menubtn.classList.remove('uil-times')
+}
+nav4.onclick = function() {
+  menu.classList.remove('open')
+  menubtn.style.transform = 'rotate(0deg)'
+  menubtn.classList.add('uil-bars')
+  menubtn.classList.remove('uil-times')
+}
+
+
+const htmlbar = document.getElementById('bar1')
+cssbar = document.getElementById('bar2')
+jsbar = document.getElementById('bar3')
+
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+    htmlbar.classList.add('activehtml')
+    cssbar.classList.add('activecss')
+    jsbar.classList.add('activejs')
+  }
+})
+
+const sw = document.querySelector('.switch')
+swcircle = document.querySelector('.switchcircle')
+
+sw.addEventListener('click', () => {
+  if (!swcircle.classList.contains('on')) {
+    swcircle.classList.add('on')
+    swcircle.innerHTML = `<ion-icon name="sunny-outline"></ion-icon>`
+    document.body.classList.add('dark')
+    menu.classList.remove('open')
+    menubtn.style.transform = 'rotate(0deg)'
+    menubtn.classList.add('uil-bars')
+    menubtn.classList.remove('uil-times')
+    sw.style.backgroundColor = '#1F2021'
+  } else {
+    swcircle.classList.remove('on')
+    swcircle.innerHTML = `<ion-icon name="moon-outline"></ion-icon>`
+    document.body.classList.remove('dark')
+    menu.classList.remove('open')
+    menubtn.style.transform = 'rotate(0deg)'
+    menubtn.classList.add('uil-bars')
+    menubtn.classList.remove('uil-times')
+    sw.style.backgroundColor = '#fff'
+  }
+})
+// Get references to the elements you want to add click listeners to
+const item1 = document.getElementById("direct");
+const item2 = document.getElementById("apkpure");
+function downloadFilePath(filePath) {
+    // Create a temporary <a> element to trigger the download
+    const a = document.createElement("a");
+    a.href = filePath;
+    a.download = "";
+  
+    // Programmatically click the <a> element to start the download
+    a.click();
+  }
+
+// Add click event listeners to both items
+item1.addEventListener("click", ()=>{
+    downloadFilePath("https://www.google.com");
+});
+item2.addEventListener("click", ()=>{
+    window.location.href = 'https://m.apkpure.com/p/com.two.chanelmyanmar';
+});
