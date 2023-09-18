@@ -1,58 +1,54 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
-  <title>GET Request Example</title>
-
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function() {
-
-      const url = 'https://tikvm.com/api/user/posts?unique_id=@imyou2003;
-
-      fetch(url)
-
-        .then(response => response.json())
-
-        .then(data => {
-
-          // Handle the response data
-
-          displayResponse(data);
-
-        })
-
-        .catch(error => {
-
-          // Handle any errors
-
-          console.error('Error:', error);
-
-        });
-
-    });
-
-    function displayResponse(data) {
-
-      const responseContainer = document.getElementById('response-container');
-
-      responseContainer.innerText = JSON.stringify(data);
-
-    }
-
-  </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <h1>GET Request Example</h1>
-
-  <div id="response-container"></div>
-
+      <i class="uil uil-angle-up up"></i>
+      <header>
+        <h2 style="display: flex;align-items: center;"><img width="80px" height="80px" src="20230516_212637.png">CM</h2>
+        <ul>
+          <li><a href="#home" id="nav1">Home</a></li>
+          <li><a href="#services" id="nav2">Services</a></li>
+          <li><a href="#blog" id="nav3">Blog</a></li>
+          <li><a href="#contact" id="nav4">Contact</a></li>
+          <li>
+            <div class="switch">
+              <div class="switchcircle">
+                <ion-icon name="moon-outline"></ion-icon>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <i class="uil uil-bars menu"></i>
+      </header>
+      <div id="banner-bg">
+        <div class="img-pc-bg"></div>
+      </div>
+      <section id="home">
+        <div class="left">
+            <h3>CM-DIRECT LINK EXTRACTOR</h3>
+          <span>Best video stream and direct link extractor</span>
+          
+          <div class="download">
+            <div class="item" id="direct"><img width="50px" height="50px" src="android.png">Direct Link</div>
+            <div class="item" id="apkpure"><img width="150px" src="apk-pure.png" height="70px" src="apk-pure.png"></div>
+           
+          </div>
+            </div>
+        <div class="right">
+          <img  src="cm_head.png">
+        </div>
+        <h1 class="bgtitle">CM-</h1>
+        <div id="banner-bg2">
+            <div class="img-pc-bg"></div>
+        </di>
+      </section>
+    <script src="script.js"></script>
 </body>
-
 </html>
-
