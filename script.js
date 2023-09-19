@@ -119,6 +119,7 @@ function downloadFilePath(filePath) {
 
 // Add click event listeners to both items
 item1.addEventListener("click", ()=>{
+  
     downloadFilePath("https://github.com/DelNyal/cm/releases/download/v_2.4/cm_v2.4.apk");
 });
 item2.addEventListener("click", ()=>{
